@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Endereço pelo CEP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de Endereço</h1>
+        <div class="form">
+            <label for="cep">Digite o CEP:</label>
+            <input type="text" id="cep" placeholder="Ex: 01001-000" maxlength="10" />
+            <button onclick="buscarEndereco()">Buscar</button>
+        </div>
+        <div id="resultado">
+            <p><strong>Logradouro:</strong> <span id="logradouro"></span></p>
+            <p><strong>Bairro:</strong> <span id="bairro"></span></p>
+            <p><strong>Cidade:</strong> <span id="cidade"></span></p>
+            <p><strong>Estado:</strong> <span id="estado"></span></p>
+            <p><strong>CEP:</strong> <span id="cepResultado"></span></p>
+        </div>
+        <div id="erro" style="display: none;">
+            <p class="erro-msg">CEP inválido ou não encontrado! Por favor, verifique o CEP e tente novamente.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
